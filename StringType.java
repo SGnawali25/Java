@@ -1,11 +1,27 @@
 import java.util.*;
 public class StringType{
-    public static void main(String args[]){
-        Scanner input = new Scanner(System.in);
-        String a = "HelloWorld";
-        String b = "HelloWorld";
 
-        String c = input.next();
+    public static String Upper(String str){
+        StringBuilder finalStr = new StringBuilder("");
+        // StringBuilder final = new StringBuilder("");
+        // if (str.length() == 0) return final.toString();
+        finalStr.append(Character.toUpperCase(str.charAt(0)));
+
+        for (int i = 1; i < str.length() ; i++){
+            if (str.charAt(i -1) == ' ' ){
+                finalStr.append(Character.toUpperCase(str.charAt(i)));
+            }else {
+                finalStr.append(str.charAt(i));
+            }
+        }
+        return finalStr.toString();
+    }
+    public static void main(String args[]){
+        // Scanner input = new Scanner(System.in);
+        // String a = "HelloWorld";
+        // String b = "HelloWorld";
+
+        // String c = input.next();
 
         // This just checks the memory location of a string
         //as a and b are initialized and they hava same value so their memory location will be same
@@ -32,6 +48,16 @@ public class StringType{
         // String sub = c.substring(0,5);
         // System.out.println(sub); 
 
+
+        //String Builder
+        //if we use string builder then it makes string mutable and works like an array
+
+        // String to uppercase
+
+        // String check = "sandesh gnawali is my name.";
+        // System.out.println(Upper(check));
+
+        
 
     }
 }
