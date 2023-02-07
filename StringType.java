@@ -16,6 +16,23 @@ public class StringType{
         }
         return finalStr.toString();
     }
+
+    //This function compress the given string
+    public static void StringCompress(String name){
+        StringBuilder finalName = new StringBuilder("");
+        finalName.append(name.charAt(0));
+        int count = 1;
+        for (int i = 1; i < name.length(); i++){
+            if (name.charAt(i) == finalName.charAt(-1)){
+                count += 1;
+            }else{
+                finalName.append(count.toString());
+                finalName.append(name.charAt(i))
+                count = 1;
+            }
+        }
+        System.out.println(finalName.toString());
+    }
     public static void main(String args[]){
         // Scanner input = new Scanner(System.in);
         // String a = "HelloWorld";
@@ -57,7 +74,7 @@ public class StringType{
         // String check = "sandesh gnawali is my name.";
         // System.out.println(Upper(check));
 
-        
-
+        String name = "aaabccccdde";
+        StringCompress(name);
     }
 }
