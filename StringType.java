@@ -20,17 +20,22 @@ public class StringType{
     //This function compress the given string
     public static void StringCompress(String name){
         StringBuilder finalName = new StringBuilder("");
+        // String finalName = "";
         finalName.append(name.charAt(0));
-        int count = 1;
+        // finalName += name.charAt(0);
+        Integer count = 1;
         for (int i = 1; i < name.length(); i++){
-            if (name.charAt(i) == finalName.charAt(-1)){
+            if (name.charAt(i) == finalName.charAt(finalName.length()-1)){
                 count += 1;
             }else{
                 finalName.append(count.toString());
-                finalName.append(name.charAt(i))
+                finalName.append(name.charAt(i));
+                // finalName += count.toString();
+                // finalName += name.charAt(i);
                 count = 1;
             }
         }
+        if (count > 1) finalName.append(count.toString());
         System.out.println(finalName.toString());
     }
     public static void main(String args[]){
@@ -74,7 +79,7 @@ public class StringType{
         // String check = "sandesh gnawali is my name.";
         // System.out.println(Upper(check));
 
-        String name = "aaabccccdde";
+        String name = "aaabccccddee";
         StringCompress(name);
     }
 }
