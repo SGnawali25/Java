@@ -57,6 +57,37 @@ public class bit_manipulation {
         int bitMask = a|b;
         return num & bitMask;
     }
+
+    //This function determine whether the input number is power of 2 or not
+    public static boolean isPowerOfTwo(int num){
+        return (num & (num-1)) == 0;
+    }
+
+    //This fuction counts the set bit in a number
+    public static int countSetsBit(int num){
+        int count = 0;
+        while (num > 0){
+            int lsb = num & 1;
+            if (lsb == 1){
+                count += 1;
+            }
+            num = num >> 1;
+        }
+        return count;
+    }
+
+    //This fuctions helps to find the mth power of given number n
+    public static int fastExponent(int num, int pow){
+        int ans = 1;
+        while (pow > 0 ){
+            if ((pow & 1)!= 0){
+                ans = ans * num;
+            }
+            num = num * num;
+            pow = pow >> 1;
+        }
+        return ans;
+    }
     public static void main(String [] args){
         // OddEven(111);
 
@@ -70,7 +101,14 @@ public class bit_manipulation {
 
         // System.out.println(clearLastIBit(15,2));
 
-        System.out.println(clearRange(10, 2, 4));
+        // System.out.println(clearRange(10, 2, 4));
+
+        // System.out.println(isPowerOfTwo(15));
+
+        // System.out.println(countSetsBit(16));
+        //Try to grasp the runtime of countSetsBit function
+
+        System.out.println(fastExponent(2,6));
     }
 
 }
