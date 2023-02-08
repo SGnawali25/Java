@@ -79,7 +79,9 @@ public class StringType{
         // String check = "sandesh gnawali is my name.";
         // System.out.println(Upper(check));
 
-        String name = "aaabccccddee";
-        StringCompress(name);
+        // String name = "aaabccccddee";
+        // StringCompress(name);
+
+        
     }
 }
