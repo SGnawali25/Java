@@ -54,12 +54,15 @@ public class bit_manipulation {
     public static int clearRange(int num, int i, int j){
         int a = (~0)<<(j + 1);
         int b = (1 << i) - 1;
+        //It is because 2^i-1 gives i one in binary and from binary left shift we have
+        //2^i == 1 << i so 2^i -1 == 1 << i - 1
         int bitMask = a|b;
         return num & bitMask;
     }
 
     //This function determine whether the input number is power of 2 or not
     public static boolean isPowerOfTwo(int num){
+        //from binary number of power of 2 we observe following conclusion
         return (num & (num-1)) == 0;
     }
 
