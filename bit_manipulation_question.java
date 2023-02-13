@@ -12,6 +12,11 @@ public class bit_manipulation_question {
         System.out.println("The one more value of given num is " + -~num);
     }
 
+    //This function converts uppercase alphabets to lowercase alphabets
+    public static void changeCase(char character){
+        int bitMask = 1<<5;
+        System.out.println((char)(character | bitMask));
+    }
 
     //from here main function starts
     public static void main(String[] args){
@@ -21,7 +26,10 @@ public class bit_manipulation_question {
         // swap(5,6);
 
         //This function add 1 to provided integer using bit manipulation
-        add1(3);
+        // add1(3);
+
+        //This function converts uppercase alphabets to lowercase alphabets
+        changeCase('A');
 
 
     }
