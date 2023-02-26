@@ -32,6 +32,7 @@ class Pen{
     }
 }
 
+//this class shows how we can protect the data using getter and setter
 class Bank{
     private String name;
     private String password;

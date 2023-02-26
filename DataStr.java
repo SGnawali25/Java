@@ -1,4 +1,3 @@
-import java.io.LineNumberReader;
 import java.util.*;
 import java.lang.Math;
 public class DataStr{
