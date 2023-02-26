@@ -10,14 +10,14 @@ public class ClassesAndObjects {
         // System.out.println(p1.color);
 
         //**Bank class */
-        Bank c1 = new Bank();
-        c1.setName("Sandesh");
-        c1.setPassword("abcdefg");
+        // Bank c1 = new Bank();
+        // c1.setName("Sandesh");
+        // c1.setPassword("abcdefg");
 
-        //here we cant use the c1.name = "Sandesh" because the access is private
+        // //here we cant use the c1.name = "Sandesh" because the access is private
 
-        System.out.println(c1.getName());
-        System.out.println(c1.getPassword());
+        // System.out.println(c1.getName());
+        // System.out.println(c1.getPassword());
 
     }
 }
