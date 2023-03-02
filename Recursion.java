@@ -116,6 +116,41 @@ public class Recursion {
         return powHandSqr;
     }
 
+    //Tiling Problem
+    //The total area is 2 * n where n is provided by user
+    //The area of single tile is 2*1
+    public static int tilingProblem(int num){
+        if (num ==0 || num == 1){
+            return 1;
+        }
+
+        //vertical choice
+        int fnm1 = tilingProblem(num -1);
+
+        //horizontal choice
+        int fnm2 = tilingProblem(num - 2);
+
+        int totalWays = fnm1 + fnm2;
+
+        return totalWays;
+    }
+
+    public static void binaryString(int num,int lastDigit, String finOut){
+        if (num == 0){
+            System.out.println(finOut);
+            return;
+        }
+
+        binaryString(num - 1, 0, finOut + "0");
+
+        if (lastDigit == 0){
+            binaryString(num - 1, 1, finOut + "1");
+        }
+
+
+
+    }
+
 
     //This is main function
     public static void main(String[] args){
@@ -146,7 +181,14 @@ public class Recursion {
 
         // System.out.println(power(2, 10));
 
-        System.out.println(powerOpt(2, 5));
+        // System.out.println(powerOpt(2, 5));
+
+        //Tiling problme
+        // System.out.println(tilingProblem(4));
+
+        // binaryString(3, 0, "");
+
+        
         
 
     }
